@@ -1,0 +1,323 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper{
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a1a;
+    color: #666;
+    overflow: hidden;
+    font-family: monospace;
+}
+
+
+.container{
+    height: 600px;
+    width: 1100px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    align-items: center;
+}
+
+.top-bar{
+    display: flex;
+    gap: 50px;
+    margin-bottom: 20px;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+.menu-item {
+    color: #444;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.TextInput{
+    border-radius: 6px;
+    height: 200px;
+    width: 110%;
+    font-size: 22px;
+    padding-left: 5px;
+    background-color: transparent;
+    margin-bottom: 45px;
+    position: absolute;
+    outline: none;
+    color: transparent;
+    border: 0;
+    cursor: default;
+}
+
+.Text{
+    font-size: 28px;
+}
+
+.startToType{
+    backdrop-filter: blur(5px);
+}
+
+.Text-area{
+    position: relative;
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    margin: 0px 40px;
+    text-align: center;
+}
+
+.retry{
+    cursor: pointer;
+}
+.top-bar img{
+    filter: grayscale(100%) brightness(0) invert(1) sepia(1) saturate(10000%) hue-rotate(180deg);
+}
+
+.Icons{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  
+}
+span.correct{
+    color: rgb(113, 241, 101);
+}
+
+span.incorrect{
+    color: rgb(252, 101, 101);
+}
+
+.resultsBox{
+    height: 500px;
+    width: 500px;
+    font-size: 28px;
+    flex-direction: column;
+    gap: 25px;
+    display: flex;
+    justify-content: center;
+    padding: 10px 15px;
+    box-shadow: 0 0 18px #444;
+}
+
+.totalTime {
+    padding: 15px 25px;
+    margin: 25px 0px;
+    border: 1px solid rgb(187, 187, 187);
+    border-radius: 8px;
+    color: #ccc;
+
+}
+
+.pointsEarned{
+    padding: 15px 25px;
+    margin: 25px 0px;
+    border: 1px solid rgb(187, 187, 187);
+    border-radius: 8px;
+    color: #ccc;
+}
+
+
+.mistakesMade{
+    padding: 15px 25px;
+    margin: 25px 0px;
+    border: 1px solid rgb(187, 187, 187);
+    border-radius: 8px;
+    color: #ccc;
+}
+
+.heading{
+    color: #eee;
+    text-align: center;
+}
+.time-options {
+    display: flex;
+    gap: 10px;
+}
+
+.timeOption{
+    color: #666;
+    padding: 2px 6px;
+    cursor: pointer;
+}
+
+.timeOption.active {
+    color: #fff;
+}
+
+.command-info {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #444;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.footer {
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    font-size: 0.8rem;
+}
+
+.footer-left, .footer-right {
+    display: flex;
+    gap: 15px;
+}
+
+.footer a {
+    color: #444;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+/*-----------Results Section--------------*/
+.dashboard {
+    width: 94vw;
+    height: 94vh;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-metrics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4vw;
+    margin-bottom: 8vh;
+    height: 40vh;
+}
+
+.metric {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.metric-label {
+    color: #666;
+    font-size: 5vh;
+    text-transform: uppercase;
+    letter-spacing: 0.5vw;
+    margin-bottom: 2vh;
+}
+
+.metric-value {
+    font-size: 15vh;
+    font-weight: 700;
+    color: #ffd700;
+}
+
+.metric-value.wpm {
+    font-size: 20vh;
+}
+
+.secondary-metrics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3vw;
+    padding-top: 4vh;
+    border-top: 2px solid #333;
+    height: 30vh;
+}
+
+.secondary-metric {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.secondary-label {
+    color: #666;
+    font-size: 3vh;
+    margin-bottom: 2vh;
+    text-transform: uppercase;
+    letter-spacing: 0.2vw;
+}
+
+.secondary-value {
+    color: #ffd700;
+    font-size: 5vh;
+    font-weight: 600;
+}
+
+.test-info {
+    display: flex;
+    justify-content: space-between;
+    color: #666;
+    font-size: 2.5vh;
+    padding-top: 4vh;
+    border-top: 2px solid #333;
+}
+
+@media (max-width: 768px) {
+    .main-metrics {
+        grid-template-columns: 1fr;
+        height: auto;
+        gap: 4vh;
+    }
+
+    .secondary-metrics {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4vh;
+        height: auto;
+    }
+
+    .metric-value {
+        font-size: 12vh;
+    }
+
+    .metric-value.wpm {
+        font-size: 15vh;
+    }
+
+    .metric-label {
+        font-size: 4vh;
+    }
+
+    .secondary-label {
+        font-size: 2.5vh;
+    }
+
+    .secondary-value {
+        font-size: 4vh;
+    }
+}
+
+/* Hover effects with scale animation */
+
+
+
+.metric, .secondary-metric {
+    transition: transform 0.3s ease;
+}
+
+.metric:hover, .secondary-metric:hover {
+    transform: scale(1.05);
+} 
+

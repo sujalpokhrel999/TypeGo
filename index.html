@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="startToType" id="startToType" style="height: 100vh; width: 100vw; position: relative; background-color: rgba(100, 102, 105,0.9); ">
+
+        <h3 style="position: absolute; top: 50%; text-align: center; width: 100%; font-size: 32px ;" id="ClickMe">Click on the screen to start.</h3>
+
+
+    <div class="wrapper" id="wrapper" style="display:none">
+        <div class="container" id="container">
+            <div class="top-bar">
+                <div class="timer menu-items" id="timer">
+                    <span class="Icons"><span>Timer- 00:30</span></span>
+                </div>
+                <div class="mistakes menu-items" id='mistakes'>
+                    <span class="Icons"><img width="20" height="20" src="https://img.icons8.com/puffy/20/error.png" alt="error"/>Mistakes: <span class="mistakeCounter" id="mistakeCounter"></span> </span>
+                </div>
+                <div class="Points menu-items" id="pointsCounter">
+                    <span class="Icons"><img width="20" height="20" src="https://img.icons8.com/puffy/20/star.png" alt="star"/>Points:<span id="pointsCounterValue">0</span></span>
+                </div>
+                
+                <div class="retry menu-items" id="retry" style="display: flex;">
+                    <img width="18" height="18" src="https://img.icons8.com/puffy/20/refresh.png" alt="refresh"/ id="refresh" onclick="refresh()">
+                </div>
+                <div class="time-options">
+                    <span class="timeOption">15</span>
+                    <span class="timeOption active">30</span>
+                    <span class="timeOption">60</span>
+                    <span class="timeOption">120</span>
+                </div>
+            </div>
+        <div class="Text-area">
+            <span class="Text" id="Text">
+                <span class="display" id="display"></span>
+            </span>
+            <input type="text" id="TextInput" class="TextInput" spellcheck="false" >
+        </div>
+        <div class="command-info">
+            tab + enter - restart test<br>
+            esc or ctrl + shift + p - command line
+        </div>
+        <div class="footer">
+            <div class="footer-left">
+                <a href="#">📧 contact</a>
+                <a href="#">👥 support</a>
+                <a href="#">github</a>
+                <a href="#">discord</a>
+                <a href="#">privacy</a>
+            </div>
+            <div class="footer-right">
+                <span>🌙 serika dark</span>
+                <span>v24.42.0</span>
+            </div>
+        </div>
+    
+        </div>
+
+
+         <div class="dashboard" id="dashboard">
+            <div class="main-metrics">
+                <div class="metric">
+                    <span class="metric-label">wpm</span>
+                    <span class="metric-value wpm"  id="wpm" >44</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">acc</span>
+                    <span class="metric-value" id="accuracy">91%</span>
+                </div>
+            </div>
+            <div class="secondary-metrics">
+                <div class="secondary-metric">
+                    <div class="secondary-label">raw</div>
+                    <div class="secondary-value" id="raw-wpm">44</div>
+                </div>
+                <div class="secondary-metric">
+                    <div class="secondary-label">characters</div>
+                    <div class="secondary-value" id="characters">55/0/0/0</div>
+                </div>
+                <div class="secondary-metric">
+                    <div class="secondary-label">consistency</div>
+                    <div class="secondary-value" id="consistency">59%</div>
+                </div>
+                <div class="secondary-metric">
+                    <div class="secondary-label">time</div>
+                    <div class="secondary-value" id="time-elapsed">15s</div>
+                </div>
+            </div>
+            <div class="test-info">
+                <span>test type: time 15</span>
+                <span>english</span>
+                <span>00:00:15 session</span>
+            </div>
+        </div> 
+
+
+
+
+
+
+</div>
+
+
+        
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
